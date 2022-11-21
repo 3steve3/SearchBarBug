@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SearchBarBug.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <SearchBar x:Name="searchBar" Placeholder="Search something" />
+        <ListView Grid.Row="1" SelectionMode="Single" ItemTapped="ListView_ItemTapped">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Search result 1</x:String>
+                    <x:String>Search result 2</x:String>
+                    <x:String>Search result 3</x:String>
+                    <x:String>Search result 4</x:String>
+                    <x:String>Search result 5</x:String>
+                    <x:String>Search result 6</x:String>
+                    <x:String>Search result 7</x:String>
+                    <x:String>Search result 8</x:String>
+                    <x:String>Search result 9</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+    </Grid>
+
+</ContentPage>
